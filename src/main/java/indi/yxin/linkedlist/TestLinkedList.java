@@ -13,5 +13,8 @@ public class TestLinkedList {
 
         list.delete(0);
         System.out.println(list);
+
+        list.removeElement(1);
+        System.out.println(list);
     }
 }

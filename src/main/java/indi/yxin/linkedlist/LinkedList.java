@@ -58,11 +58,11 @@ public class LinkedList<E> {
         size ++;
     }
 
-    // 在链表头添加元素e
+    // 在链表头添加元素e,O(1)
     public void addFirst(E e) {
         add(0, e);
     }
-    // 在链表末尾添加元素
+    // 在链表末尾添加元素,O(n)
     public void addLast(E e) {
         add(size, e);
     }
@@ -91,6 +91,20 @@ public class LinkedList<E> {
 
     public E deleteLast() {
         return delete(size - 1);
+    }
+
+    public void removeElement(E e) {
+        Node prev = dummyHead;
+        Node delNode = prev.next;
+        while (delNode != null){
+            if(delNode.e.equals(e)) {
+                prev.next = delNode.next;
+                delNode.next = null;
+                size --;
+            }
+            prev = prev.next;
+            delNode = delNode.next;
+        }
     }
 
     // 获得链表的第index个元素并返回

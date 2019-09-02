@@ -1,6 +1,5 @@
 package indi.yxin.loopqueue;
 
-import indi.yxin.array.MyArray;
 import indi.yxin.arrayqueue.Queue;
 
 /**

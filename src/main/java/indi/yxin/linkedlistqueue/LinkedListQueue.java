@@ -57,6 +57,7 @@ public class LinkedListQueue<E> implements Queue<E> {
     public E dequeue() {
         // 尾结点插入为O(1),删除为O(n)
         // 所以尾结点为队列头，头结点为队列尾
+        // 从tail端插入元素，从head端删除元素
         if (isEmpty()) {
             throw new IllegalArgumentException("Cannot dequeue from a empty queue.");
         }
