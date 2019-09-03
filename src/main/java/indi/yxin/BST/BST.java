@@ -313,12 +313,14 @@ public class BST<E extends Comparable<E>> {
             if (node.left == null) {
                 Node rightNode = node.right;
                 node.right = null;
+                size --;
                 return rightNode;
             }
             // 待删除元素右子树为空
             if (node.right == null) {
                 Node leftNode = node.left;
                 node.left = null;
+                size --;
                 return leftNode;
             }
             // 待删除元素左右子树都不为空

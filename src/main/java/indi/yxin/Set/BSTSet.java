@@ -1,7 +1,7 @@
 package indi.yxin.Set;
 
 import indi.yxin.BST.BST;
-
+// 时间复杂度较链表更低
 public class BSTSet<E extends Comparable<E>> implements Set<E> {
 
     private BST<E> bst;

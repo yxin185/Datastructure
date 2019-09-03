@@ -2,6 +2,7 @@ package indi.yxin.Set;
 
 import indi.yxin.linkedlist.LinkedList;
 
+// 时间复杂度较高
 public class LinkedListSet<E> implements Set<E> {
 
     private LinkedList<E> list;
@@ -18,7 +19,7 @@ public class LinkedListSet<E> implements Set<E> {
 
     @Override
     public void remove(E e) {
-
+        list.removeElement(e);
     }
 
     @Override
