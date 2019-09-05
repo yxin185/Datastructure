@@ -16,6 +16,14 @@ public class MyArray<E> {
         this(10);
     }
 
+    public MyArray(E[] arr) {
+        data = (E[]) new Object[arr.length];
+        for (int i = 0;i < arr.length;i++){
+            data[i] = arr[i];
+        }
+        size = arr.length;
+    }
+
     public int getSize() {
         return size;
     }
@@ -124,6 +132,26 @@ public class MyArray<E> {
         return remove(size - 1);
     }
 
+
+    // 将数组变成newCapacity大小
+    public void resize(int newCapacity) {
+
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0;i < size;i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
+    }
+    // 交换索引为i,j的两个元素的位置
+    public void swap(int i,int j) {
+        if (i < 0 || i >= size || j < 0 || j >= size)
+            throw new IllegalArgumentException("Index is illegal");
+
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -137,16 +165,6 @@ public class MyArray<E> {
         }
         sb.append(']');
         return sb.toString();
-    }
-
-    // 将数组变成newCapacity大小
-    public void resize(int newCapacity) {
-
-        E[] newData = (E[]) new Object[newCapacity];
-        for (int i = 0;i < size;i++) {
-            newData[i] = data[i];
-        }
-        data = newData;
     }
 
 }
