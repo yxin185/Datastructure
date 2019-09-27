@@ -12,8 +12,8 @@ public class TestSegmentTree {
 //        });
         // 使用lambda 表达式
         SegmentTree<Integer> segTree = new SegmentTree<>(nums, (a,b) -> a + b);
-//        System.out.println(segTree);
+        System.out.println(segTree);
 
-        System.out.println(segTree.query(0,2));
+        System.out.println(segTree.query(0,5));
     }
 }

@@ -57,6 +57,7 @@ public class UnionFind5 implements UF {
             throw new IllegalArgumentException("index is illegal.");
         }
         while (index != parent[index]){
+            // 把index的父亲节点更新为他父亲节点的父亲节点
             parent[index] = parent[parent[index]];
             index = parent[index];
         }
