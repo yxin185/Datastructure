@@ -4,12 +4,16 @@ public class Knapsack01 {
     public static void main(String[] args) {
         Solution01 s = new Solution01();
         DP dp = new DP();
+        DPAdvance dpa = new DPAdvance();
         int[] v = {6,10,12};
         int[] w = {1,2,3};
         int C = 5;
 //        int res1 = s.knapsack01(w,v,C);
-        int res2 = dp.knapsack01(w,v,C);
-        System.out.println(res2);
+//        int res2 = dp.knapsack01(w,v,C);
+        int res3 = dpa.knapsack01(w,v,C);
+//        System.out.println("res2 = " + res2);
+        System.out.println("res3 = " + res3);
+
     }
 
 }
@@ -105,5 +109,26 @@ class DP {
             }
         }
         return memo[n - 1][C];
+    }
+}
+
+// 使用一行来记录
+class DPAdvance {
+    public int knapsack01(int[] w, int[] v, int C) {
+        int n = w.length;
+        if (n == 0 || C == 0)
+            return 0;
+
+        int[] memo = new int[C + 1];
+        for (int j = 0;j <= C;j ++)
+            memo[j] = (j >= w[0] ? v[0] : 0);
+
+        for (int i = 0;i < n;i ++) {
+            for (int j = C;j >= w[i];j --) {
+                memo[j] = Math.max(memo[j - 1], v[i] + memo[j - w[i]]);
+            }
+        }
+
+        return memo[C];
     }
 }
