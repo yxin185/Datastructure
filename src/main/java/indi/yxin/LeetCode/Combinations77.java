@@ -6,12 +6,12 @@ import java.util.List;
 public class Combinations77 {
 
     public static void main(String[] args) {
-        Solution1 s = new Solution1();
-        System.out.println(s.combine(20, 10));
+        Solution77 s = new Solution77();
+        System.out.println(s.combine(4, 2));
     }
 }
 
-class Solution1 {
+class Solution77 {
     private List<List<Integer>> res;
     public List<List<Integer>> combine(int n, int k) {
         res = new LinkedList<>();
