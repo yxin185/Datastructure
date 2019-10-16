@@ -30,16 +30,16 @@ public class TestUF {
     }
 
     public static void main(String[] args) {
-//        double time1 = testUF(new UnionFind1(100000), 100000);
-//        double time2 = testUF(new UnionFind2(100000), 100000);
-        double time3 = testUF(new UnionFind3(10000000), 10000000);
-        double time4 = testUF(new UnionFind4(10000000), 10000000);
-        double time5 = testUF(new UnionFind5(10000000), 10000000);
+        double time1 = testUF(new UnionFind1(100000), 100000);
+        double time2 = testUF(new UnionFind2(100000), 100000);
+//        double time3 = testUF(new UnionFind3(10000000), 10000000);
+//        double time4 = testUF(new UnionFind4(10000000), 10000000);
+//        double time5 = testUF(new UnionFind5(10000000), 10000000);
 
-//        System.out.println("time1 = " + time1 + "s");
-//        System.out.println("time2 = " + time2 + "s");
-        System.out.println("time3 = " + time3 + "s");
-        System.out.println("time4 = " + time4 + "s");
-        System.out.println("time5 = " + time5 + "s");
+        System.out.println("time1 = " + time1 + "s");
+        System.out.println("time2 = " + time2 + "s");
+//        System.out.println("time3 = " + time3 + "s");
+//        System.out.println("time4 = " + time4 + "s");
+//        System.out.println("time5 = " + time5 + "s");
     }
 }
